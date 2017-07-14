@@ -2,10 +2,10 @@
   "enforceSecurity" : false,
   "loginConfig" : {
     "type" : "PAGE",
-    "pageName" : "Login",
+    "pageName" : "Main",
     "sessionTimeout" : {
-      "type" : "DIALOG",
-      "pageName" : null,
+      "type" : "PAGE",
+      "pageName" : "Login",
       "timeoutValue" : 30
     }
   },
@@ -19,10 +19,10 @@
     "enforceXssSecurity" : false,
     "policyFile" : null,
     "xssFilterStrategy" : "NONE",
-    "policyType" : null
+    "policyType" : "IMPORT"
   },
   "csrfConfig" : {
-    "enforceCsrfSecurity" : true,
+    "enforceCsrfSecurity" : false,
     "headerName" : "X-WM-XSRF-TOKEN"
   },
   "tokenAuthConfig" : {

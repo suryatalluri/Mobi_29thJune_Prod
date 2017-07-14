@@ -1,0 +1,145 @@
+<wm-page name="page1" data-ng-controller="liveform1PageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-liveform title="Alltypes Info" captionposition="top" name="liveform1" height="300" iconclass="wi wi-edit" dataset="bind:Variables.DB123TestingAllTypesData.dataSet" captionalign="left" defaultmode="Edit" errormessage="" formlayout="inline"
+            validationtype="none" messagelayout="Inline">
+                <wm-layoutgrid name="layoutgrid1" columns="1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                            <wm-form-field type="integer" readonly="false" widget="number" displayname="Id" required="true" name="id" show="true" placeholder="Enter value" generator="assigned" primary-key="true" key="id" step="0" inputtype="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn name="gridcolumn2" columnwidth="12">
+                            <wm-form-field type="byte" readonly="false" widget="number" displayname="Byte Col" required="true" name="byteCol" show="true" placeholder="Enter value" generator="assigned" primary-key="false" key="byteCol" step="0" inputtype="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn name="gridcolumn3" columnwidth="12">
+                            <wm-form-field type="short" readonly="false" widget="number" displayname="Short Col" required="true" name="shortCol" show="true" placeholder="Enter value" generator="assigned" primary-key="false" key="shortCol" step="0" inputtype="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn name="gridcolumn4" columnwidth="12">
+                            <wm-form-field type="integer" readonly="false" widget="number" displayname="Int Col" required="true" name="intCol" show="true" placeholder="Enter value" generator="assigned" primary-key="false" key="intCol" step="0" inputtype="number"
+                            autofocus="true"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow5">
+                        <wm-gridcolumn name="gridcolumn5" columnwidth="12">
+                            <wm-form-field type="long" readonly="false" widget="number" displayname="Long Col" required="true" name="longCol" show="true" placeholder="Enter value" generator="assigned" primary-key="false" key="longCol" step="0" inputtype="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow6">
+                        <wm-gridcolumn name="gridcolumn6" columnwidth="12">
+                            <wm-form-field type="double" readonly="false" widget="number" displayname="Float Col" required="true" name="floatCol" show="true" placeholder="Enter value" generator="assigned" primary-key="false" key="floatCol" step="0.0001" inputtype="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow7">
+                        <wm-gridcolumn name="gridcolumn7" columnwidth="12">
+                            <wm-form-field type="big_decimal" readonly="false" widget="number" displayname="Double Col" required="true" name="doubleCol" show="true" placeholder="Enter value" generator="assigned" primary-key="false" key="doubleCol" step="1e-8"
+                            inputtype="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow8">
+                        <wm-gridcolumn name="gridcolumn8" columnwidth="12">
+                            <wm-form-field type="big_integer" readonly="false" widget="number" displayname="Bigint Col" required="true" name="bigintCol" show="true" placeholder="Enter value" generator="assigned" primary-key="false" key="bigintCol" step="0"
+                            inputtype="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow9">
+                        <wm-gridcolumn name="gridcolumn9" columnwidth="12">
+                            <wm-form-field type="big_decimal" readonly="false" widget="number" displayname="Bigdec Col" required="true" name="bigdecCol" show="true" placeholder="Enter value" generator="assigned" primary-key="false" key="bigdecCol" step="1e-15"
+                            inputtype="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow10">
+                        <wm-gridcolumn name="gridcolumn10" columnwidth="12">
+                            <wm-form-field type="string" readonly="false" widget="autocomplete" displayname="String Col" required="true" name="stringCol" show="true" placeholder="Search" generator="assigned" primary-key="false" key="stringCol" maxchars="255"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow11">
+                        <wm-gridcolumn name="gridcolumn11" columnwidth="12">
+                            <wm-form-field type="string" readonly="false" widget="text" displayname="Text Col" required="true" name="textCol" show="true" placeholder="Enter value" generator="assigned" primary-key="false" key="textCol" maxchars="255" inputtype="text"
+                            displayformat="(999) 999-9999 ext. 999" autofocus="true"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow12">
+                        <wm-gridcolumn name="gridcolumn12" columnwidth="12">
+                            <wm-form-field type="string" readonly="false" widget="text" displayname="Clob Col" required="true" name="clobCol" show="true" placeholder="Enter value" generator="assigned" primary-key="false" key="clobCol" maxchars="255" inputtype="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow13">
+                        <wm-gridcolumn name="gridcolumn13" columnwidth="12">
+                            <wm-form-field type="date" readonly="false" widget="date" displayname="Date Col" required="true" name="dateCol" show="true" placeholder="Select date" generator="assigned" primary-key="false" key="dateCol" outputformat="yyyy-MM-dd"
+                            defaultvalue="CURRENT_DATE" maxdate="CURRENT_DATE" mindate="bind:Variables.staticVariable1.dataSet.dataValue"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow14">
+                        <wm-gridcolumn name="gridcolumn14" columnwidth="12">
+                            <wm-form-field type="datetime" readonly="false" widget="datetime" displayname="Datetime Col" required="true" name="datetimeCol" show="true" placeholder="Select date time" generator="assigned" primary-key="false" key="datetimeCol"
+                            outputformat="yyyy-MM-ddTHH:mm:ss" defaultvalue="CURRENT_DATE"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow15">
+                        <wm-gridcolumn name="gridcolumn15" columnwidth="12">
+                            <wm-form-field type="time" readonly="false" widget="time" displayname="Time Col" required="true" name="timeCol" show="true" placeholder="Select time" generator="assigned" primary-key="false" key="timeCol" outputformat="HH:mm:ss"
+                            defaultvalue="CURRENT_TIME"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow16">
+                        <wm-gridcolumn name="gridcolumn16" columnwidth="12">
+                            <wm-form-field type="datetime" readonly="false" widget="datetime" displayname="Timestamp Col" required="true" name="timestampCol" show="true" placeholder="Select date time" generator="assigned" primary-key="false" key="timestampCol"
+                            outputformat="yyyy-MM-ddTHH:mm:ss" defaultvalue="CURRENT_DATE"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow17">
+                        <wm-gridcolumn name="gridcolumn17" columnwidth="12">
+                            <wm-form-field type="boolean" readonly="false" widget="checkbox" displayname="Boolean Col" required="true" name="booleanCol" show="true" placeholder="" generator="assigned" primary-key="false" key="booleanCol"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow18">
+                        <wm-gridcolumn name="gridcolumn18" columnwidth="12">
+                            <wm-form-field type="blob" readonly="false" widget="upload" displayname="Blob Col" required="true" name="blobCol" show="true" generator="assigned" primary-key="false" key="blobCol" maxchars="-1" filetype="image"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <wm-form-action title="Reset" disabled="false" class="form-reset btn-secondary" type="button" show="true" iconclass="wi wi-refresh" key="reset" action="reset()" display-name="Reset" update-mode="true" position="footer,header"></wm-form-action>
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <wm-form-action title="Save" disabled="false" class="form-save btn-success" type="submit" show="true" iconclass="wi wi-save" key="save" display-name="Save" update-mode="true" position="footer,header"></wm-form-action>
+            </wm-liveform>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>

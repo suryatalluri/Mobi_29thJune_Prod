@@ -1,0 +1,11 @@
+<wm-page name="page1" data-ng-controller="filePageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-fileupload multiple="true" name="fileupload1" operation="uploadFile" service="FileService" contenttype="image"></wm-fileupload>
+            <wm-chart title="Area Chart" type="Area" name="chart1" iconclass="fa fa-area-chart" height="250px" dataset="bind:Variables.liveVariable1.dataSet" yaxisdatakey="deptId" xaxisdatakey="name"></wm-chart>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>

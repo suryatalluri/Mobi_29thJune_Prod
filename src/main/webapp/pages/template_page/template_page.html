@@ -1,0 +1,16 @@
+<wm-page name="page1" data-ng-controller="template_pagePageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-segmented-control name="segmented_control1">
+                <wm-segment-content name="segment_content1" caption="Title 1">
+                    <wm-fileupload name="fileupload1" contenttype="image" service="FileService" operation="uploadFile"></wm-fileupload>
+                </wm-segment-content>
+                <wm-segment-content name="segment_content2" caption="Title 2"></wm-segment-content>
+                <wm-segment-content name="segment_content3" caption="Title 3"></wm-segment-content>
+            </wm-segmented-control>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>

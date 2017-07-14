@@ -1,0 +1,112 @@
+<wm-page name="page1" data-ng-controller="LivefilterPageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-livefilter title="Filter Alltypes" name="livefilter1" captionposition="top" dataset="bind:Variables.DB123TestingAllTypesData.dataSet" captionalign="left">
+                <wm-layoutgrid name="layoutgrid1" columns="1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                            <wm-filter-field type="integer" name="id" widget="number" displayname="Id" show="true" placeholder="Enter value" key="id" generator="assigned" inputtype="number" is-primary-key="true" is-range="false" field="id"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn name="gridcolumn2" columnwidth="12">
+                            <wm-filter-field type="byte" name="byteCol" widget="number" displayname="Byte Col" show="true" placeholder="Enter value" key="byteCol" generator="assigned" inputtype="number" is-primary-key="false" is-range="false" field="byteCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn name="gridcolumn3" columnwidth="12">
+                            <wm-filter-field type="short" name="shortCol" widget="number" displayname="Short Col" show="true" placeholder="Enter value" key="shortCol" generator="assigned" inputtype="number" is-primary-key="false" is-range="false" field="shortCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn name="gridcolumn4" columnwidth="12">
+                            <wm-filter-field type="integer" name="intCol" widget="select" displayname="Int Col" show="true" key="intCol" generator="assigned" inputtype="number" is-primary-key="false" is-range="false" field="intCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow5">
+                        <wm-gridcolumn name="gridcolumn5" columnwidth="12">
+                            <wm-filter-field type="long" name="longCol" widget="number" displayname="Long Col" show="true" placeholder="Enter value" key="longCol" generator="assigned" inputtype="number" is-primary-key="false" is-range="false" field="longCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow6">
+                        <wm-gridcolumn name="gridcolumn6" columnwidth="12">
+                            <wm-filter-field type="double" name="floatCol" widget="number" displayname="Float Col" show="true" placeholder="Enter value" key="floatCol" generator="assigned" inputtype="number" is-primary-key="false" is-range="false" field="floatCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow7">
+                        <wm-gridcolumn name="gridcolumn7" columnwidth="12">
+                            <wm-filter-field type="big_decimal" name="doubleCol" widget="number" displayname="Double Col" show="true" placeholder="Enter value" key="doubleCol" generator="assigned" inputtype="number" is-primary-key="false" is-range="false"
+                            field="doubleCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow8">
+                        <wm-gridcolumn name="gridcolumn8" columnwidth="12">
+                            <wm-filter-field type="big_integer" name="bigintCol" widget="number" displayname="Bigint Col" show="true" placeholder="Enter value" key="bigintCol" generator="assigned" inputtype="number" is-primary-key="false" is-range="false"
+                            field="bigintCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow9">
+                        <wm-gridcolumn name="gridcolumn9" columnwidth="12">
+                            <wm-filter-field type="big_decimal" name="bigdecCol" widget="number" displayname="Bigdec Col" show="true" placeholder="Enter value" key="bigdecCol" generator="assigned" inputtype="number" is-primary-key="false" is-range="false"
+                            field="bigdecCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow10">
+                        <wm-gridcolumn name="gridcolumn10" columnwidth="12">
+                            <wm-filter-field type="string" name="stringCol" widget="autocomplete" displayname="String Col" show="true" placeholder="Search" key="stringCol" generator="assigned" is-primary-key="false" is-range="false" field="stringCol" matchmode="start"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow11">
+                        <wm-gridcolumn name="gridcolumn11" columnwidth="12">
+                            <wm-filter-field type="string" name="textCol" widget="text" displayname="Text Col" show="true" placeholder="Enter value" key="textCol" generator="assigned" inputtype="text" is-primary-key="false" is-range="false" field="textCol"
+                            matchmode="start"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow12">
+                        <wm-gridcolumn name="gridcolumn12" columnwidth="12">
+                            <wm-filter-field type="string" name="clobCol" widget="text" displayname="Clob Col" show="true" placeholder="Enter value" key="clobCol" generator="assigned" inputtype="text" is-primary-key="false" is-range="false" field="clobCol"
+                            matchmode="start"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow13">
+                        <wm-gridcolumn name="gridcolumn13" columnwidth="12">
+                            <wm-filter-field type="date" name="dateCol" widget="date" displayname="Date Col" show="true" placeholder="Select date" key="dateCol" generator="assigned" is-primary-key="false" is-range="false" field="dateCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow14">
+                        <wm-gridcolumn name="gridcolumn14" columnwidth="12">
+                            <wm-filter-field type="datetime" name="datetimeCol" widget="datetime" displayname="Datetime Col" show="true" placeholder="Select date time" key="datetimeCol" generator="assigned" is-primary-key="false" is-range="false" field="datetimeCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow15">
+                        <wm-gridcolumn name="gridcolumn15" columnwidth="12">
+                            <wm-filter-field type="time" name="timeCol" widget="time" displayname="Time Col" show="true" placeholder="Select time" key="timeCol" generator="assigned" is-primary-key="false" is-range="false" field="timeCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow16">
+                        <wm-gridcolumn name="gridcolumn16" columnwidth="12">
+                            <wm-filter-field type="datetime" name="timestampCol" widget="datetime" displayname="Timestamp Col" show="true" placeholder="Select date time" key="timestampCol" generator="assigned" is-primary-key="false" is-range="false" field="timestampCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow17">
+                        <wm-gridcolumn name="gridcolumn17" columnwidth="12">
+                            <wm-filter-field type="boolean" name="booleanCol" widget="checkbox" displayname="Boolean Col" show="true" placeholder="" key="booleanCol" generator="assigned" is-primary-key="false" is-range="false" field="booleanCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow18">
+                        <wm-gridcolumn name="gridcolumn18" columnwidth="12">
+                            <wm-filter-field type="blob" name="blobCol" widget="upload" displayname="Blob Col" show="true" key="blobCol" generator="assigned" is-primary-key="false" is-range="false" field="blobCol"></wm-filter-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <wm-filter-action title="Filter" disabled="false" class="btn-primary" type="button" show="true" iconclass="wi wi-filter-list" key="filter" display-name="Filter" action="filter()"></wm-filter-action>
+                <!--?XML:NAMESPACE PREFIX = "PUBLIC" NS = "URN:COMPONENT" /-->
+                <wm-filter-action title="Clear" disabled="false" class="btn-secondary" type="button" show="true" iconclass="wi wi-cancel" key="clear" display-name="Clear" action="clearFilter()"></wm-filter-action>
+            </wm-livefilter>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>

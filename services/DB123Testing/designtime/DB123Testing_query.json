@@ -1,0 +1,45 @@
+{
+  "insert_query" : {
+    "name" : "insert_query",
+    "description" : "insert_query",
+    "version" : "V2",
+    "queryString" : "insert into Test_blob (Name, City, Icon) values (:Name, :City, :Icon)",
+    "countQueryString" : null,
+    "nativeSql" : true,
+    "fetchCount" : false,
+    "type" : "INSERT",
+    "parameters" : [ {
+      "name" : "Name",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "test",
+      "required" : true
+    }, {
+      "name" : "City",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "test",
+      "required" : true
+    }, {
+      "name" : "Icon",
+      "type" : "blob",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : { },
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.mobi_29thjune_prod.db123testing.models.query.InsertQueryRequest",
+      "method" : "POST"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  }
+}

@@ -1,10 +1,49 @@
 <wm-page data-ng-controller="MainPageController" name="mainpage">
-  <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
-  <wm-mobile-navbar name="mobile_navbar1" title="Title" leftnavpaneliconclass="wi wi-menu" backbutton="false">
-    <wm-anchor caption="" name="AddLink" iconclass="wi wi-gear"></wm-anchor>
-  </wm-mobile-navbar>
-  <wm-content name="content1">
-    <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
-  </wm-content>
-  <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+    <wm-left-panel name="left_panel1" content="leftnav" columnwidth="2" xscolumnwidth="10"></wm-left-panel>
+    <wm-mobile-navbar title="Title" name="mobile_navbar1" leftnavpaneliconclass="wi wi-menu" backbutton="false">
+        <wm-button class="navbar-btn btn-primary btn-default" type="button" caption="Action" name="button1" margin="unset 0.5em" iconclass=""></wm-button>
+    </wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-livelist class="list-card" name="livelist1" navigation="Basic" listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-3 lg-4" dataset="bind:Variables.DB123TestingAllTypesData.dataSet">
+                <wm-listtemplate name="listtemplate1" layout="media">
+                    <wm-card name="card1">
+                        <wm-card-content name="card_content1" fontsize="0.8" fontunit="em">
+                            <wm-layoutgrid name="layoutgrid1" columns="2">
+                                <wm-gridrow name="gridrow1">
+                                    <wm-gridcolumn class="col-xs-6" name="gridcolumn1" columnwidth="6" colwidth="6">
+                                        <wm-picture width="100%" name="Picture" picturesource="bind:Variables.DB123TestingAllTypesData.dataSet.blobCol"></wm-picture>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn class="col-xs-6" name="gridcolumn2" columnwidth="6" colwidth="6" padding="unset 1.25em">
+                                        <wm-label class="text-muted p" caption="bind:Variables.DB123TestingAllTypesData.dataSet.intCol" name="ID" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label class="h4" caption="bind:Variables.DB123TestingAllTypesData.dataSet.stringCol" name="Name" margin="0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label class="h5" caption="bind:Variables.DB123TestingAllTypesData.dataSet.textCol" name="JobTitle" margin="0px unset unset unset" whitespace="nowrap"></wm-label>
+                                        <wm-label class="p text-muted" caption="bind:Variables.DB123TestingAllTypesData.dataSet.byteCol" name="Department" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label class="text-muted p" caption="bind:Variables.DB123TestingAllTypesData.dataSet.timestampCol" name="Location" whitespace="nowrap"></wm-label>
+                                        <wm-anchor class="h5" caption="bind:Variables.DB123TestingAllTypesData.dataSet.longCol" name="PhoneNumber" margin="0px unset" whitespace="nowrap" hyperlink="tel:"></wm-anchor>
+                                        <wm-anchor class="p text-muted" caption="bind:Variables.DB123TestingAllTypesData.dataSet.doubleCol" name="EmailID" whitespace="nowrap" hyperlink="mailto://"></wm-anchor>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-card-content>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-livelist>
+            <wm-fileupload name="fileupload1" operation="uploadFile" service="FileService" contenttype="image"></wm-fileupload>
+            <wm-button class="btn-default" type="button" caption="Button" name="button2" margin="unset 0.5em" badgevalue="1"></wm-button>
+            <wm-camera name="camera2" correctorientation="true"></wm-camera>
+            <wm-message caption="tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt ttttttttttttttt tttttt ttttttt" name="message1"></wm-message>
+            <wm-livelist class="media-list" name="livelist2" navigation="Pager" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" dataset="bind:Variables.HrdbEmployeeData.dataSet" datafield="All Fields" itemclass="list-group-item">
+                <wm-listtemplate name="listtemplate2" layout="inline">
+                    <wm-container class="media-left" name="container1">
+                        <wm-picture class="media-object" width="32pt" name="Picture" height="32pt" picturesource="bind:Variables.HrdbEmployeeData.dataSet.picurl" shape="circle"></wm-picture>
+                    </wm-container>
+                    <wm-container class="media-body" name="container2">
+                        <wm-label class="p media-heading" caption="bind:Variables.HrdbEmployeeData.dataSet.firstname" name="Name" fontunit="em" padding="unset unset unset 1.25em"></wm-label>
+                    </wm-container>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="bind:Variables.staticVariable1.dataSet" itemlabel="label" itemicon="icon" itemlink="link"></wm-mobile-tabbar>
 </wm-page>

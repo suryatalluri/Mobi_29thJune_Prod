@@ -1,0 +1,43 @@
+<wm-page name="page1" data-ng-controller="liveform_validationPageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-liveform title="User Info" captionposition="top" name="liveform1" iconclass="wi wi-edit" dataset="bind:Variables.HrdbUserData.dataSet" captionalign="left" defaultmode="Edit" errormessage="" formlayout="inline">
+                <wm-layoutgrid name="layoutgrid1" columns="1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                            <wm-form-field type="string" widget="text" displayname="Username" required="false" name="username" show="true" generator="assigned" primary-key="false" key="username" maxchars="20" mobile-display="true" pc-display="true" is-related="false"
+                            validationmessage="test username"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn name="gridcolumn2" columnwidth="12">
+                            <wm-form-field type="string" widget="text" displayname="Password" required="false" name="password" show="true" generator="assigned" primary-key="false" key="password" maxchars="20" mobile-display="true" pc-display="true" is-related="false"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn name="gridcolumn3" columnwidth="12">
+                            <wm-form-field type="string" widget="text" displayname="Role" required="false" name="role" show="true" generator="assigned" primary-key="false" key="role" maxchars="20" mobile-display="true" pc-display="true" is-related="false"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn name="gridcolumn4" columnwidth="12">
+                            <wm-form-field type="integer" widget="number" displayname="Tenant Id" required="false" name="tenantId" show="true" step="0" generator="assigned" primary-key="false" key="tenantId" mobile-display="true" pc-display="true" is-related="false"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-form-field type="integer" widget="number" displayname="User Id" required="true" name="userId" show="false" step="0" generator="identity" primary-key="true" key="userId" mobile-display="true" pc-display="true" is-related="false"></wm-form-field>
+                <wm-form-action class="form-reset btn-secondary" type="button" show="true" iconclass="wi wi-refresh" key="reset" action="reset()" display-name="Reset" update-mode="true"></wm-form-action>
+                <wm-form-action class="form-save btn-success" type="submit" show="true" iconclass="wi wi-save" key="save" display-name="Save" update-mode="true"></wm-form-action>
+            </wm-liveform>
+            <wm-button class="btn-default" type="button" name="button1" caption="Button" on-tap="button1Tap($event, $scope)" margin="unset 0.5em"></wm-button>
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1"></wm-tabpane>
+                <wm-tabpane name="tabpane2"></wm-tabpane>
+                <wm-tabpane name="tabpane3"></wm-tabpane>
+            </wm-tabs>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>

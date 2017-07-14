@@ -1,0 +1,14 @@
+<wm-page data-ng-controller="test12111PageController" name="page1">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-container name="container1"></wm-container>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+    <wm-view class="dialog-view" name="view1">
+        <wm-alertdialog title="{{notification.title}}" name="notificationalertdialog" controller="NotificationDialogController" message="{{notification.text}}" notificationdialog="alert" oktext="{{notification.okButtonText}}" alerttype="{{notification.alerttype}}"
+        on-ok="variableOnOk()" on-close="variableOnClose()"></wm-alertdialog>
+    </wm-view>
+</wm-page>

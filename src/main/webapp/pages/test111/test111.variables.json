@@ -1,0 +1,65 @@
+{
+  "notificationVariable1" : {
+    "_id" : "wm-notificationVariable1-wm.NotificationVariable-1499685792028",
+    "name" : "notificationVariable1",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "text",
+      "value" : "on tap success",
+      "type" : "string"
+    }, {
+      "target" : "title",
+      "value" : "title",
+      "type" : "string"
+    }, {
+      "target" : "okButtonText",
+      "value" : "ok",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "success",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  },
+  "serviceVariable1" : {
+    "_id" : "wm-serviceVariable1-wm.ServiceVariable-1499686248571",
+    "name" : "serviceVariable1",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "1",
+      "type" : "integer"
+    } ],
+    "type" : "com.hrdb.Department",
+    "service" : "hrdb",
+    "operation" : "getDepartment",
+    "operationId" : "DepartmentController_getDepartment",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Department"
+  },
+  "staticVariable1" : {
+    "_id" : "wm-staticVariable1-wm.Variable-1499691997771",
+    "name" : "staticVariable1",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : true
+    },
+    "type" : "boolean",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}

@@ -1,20 +1,4 @@
 {
-  "appNotification" : {
-    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
-    "name" : "appNotification",
-    "owner" : "App",
-    "category" : "wm.NotificationVariable",
-    "dataBinding" : [ {
-    "target" : "class",
-    "value" : "Error",
-    "type" : "list"
-    }, {
-    "target" : "toasterPosition",
-    "value" : "bottom right",
-    "type" : "list"
-    } ],
-    "operation" : "toast"
-  },
   "appInfo" : {
     "_id" : "wm-getAppInfo-wm.DeviceVariable-1444134876543",
     "name" : "appInfo",
@@ -28,6 +12,58 @@
       "cordovaversion" : "X.X.X"
     },
     "startUpdate" : true
+  },
+  "appNotification" : {
+    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
+    "name" : "appNotification",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "datasyncPull" : {
+    "_id" : "wm-datasyncPull-wm.DeviceVariable-1499086757936",
+    "name" : "datasyncPull",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "datasync",
+    "operation" : "pull",
+    "dataSet" : {
+      "tasksCompleted" : 0,
+      "tasksTotal" : 0,
+      "inProgress" : false
+    },
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "clearData" : true
+  },
+  "datasyncPush" : {
+    "_id" : "wm-datasyncPush-wm.DeviceVariable-1499086757936",
+    "name" : "datasyncPush",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "datasync",
+    "operation" : "push",
+    "dataSet" : {
+      "success" : 0,
+      "error" : 0,
+      "completed" : 0,
+      "total" : 0,
+      "inProgress" : false
+    },
+    "spinnerContext" : "page",
+    "startUpdate" : false,
+    "autoUpdate" : false
   },
   "deviceInfo" : {
     "_id" : "wm-deviceInfo-getDeviceInfo-wm.DeviceVariable-1444134852623",
@@ -46,6 +82,105 @@
     },
     "startUpdate" : true
   },
+  "FileServiceUploadFile" : {
+    "_id" : "wm-FileServiceUploadFile-wm.ServiceVariable-1498712916424",
+    "name" : "FileServiceUploadFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mobi_29thjune_prod.fileservice.FileService.FileUploadResponse",
+    "service" : "FileService",
+    "operation" : "uploadFile",
+    "operationId" : "FileController_uploadFile",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "File"
+  },
+  "goToPage_file" : {
+    "_id" : "wm-goToPage_file-wm.NavigationVariable-1499064756076",
+    "name" : "goToPage_file",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "file",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Googlemaps" : {
+    "_id" : "wm-goToPage_Googlemaps-wm.NavigationVariable-1499157977956",
+    "name" : "goToPage_Googlemaps",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Googlemaps",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_jtj" : {
+    "_id" : "wm-goToPage_jtj-wm.NavigationVariable-1499060171240",
+    "name" : "goToPage_jtj",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "jtj",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Livefilter" : {
+    "_id" : "wm-goToPage_Livefilter-wm.NavigationVariable-1499074553079",
+    "name" : "goToPage_Livefilter",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Livefilter",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_liveform" : {
+    "_id" : "wm-goToPage_liveform-wm.NavigationVariable-1498799695452",
+    "name" : "goToPage_liveform",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "liveform",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_liveform1" : {
+    "_id" : "wm-goToPage_liveform1-wm.NavigationVariable-1499937154144",
+    "name" : "goToPage_liveform1",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "liveform1",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_liveform_validation" : {
+    "_id" : "wm-goToPage_liveform_validation-wm.NavigationVariable-1499159699823",
+    "name" : "goToPage_liveform_validation",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "liveform_validation",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -54,13 +189,254 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
+  "goToPage_page" : {
+    "_id" : "wm-goToPage_page-wm.NavigationVariable-1499064341743",
+    "name" : "goToPage_page",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "page",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_select" : {
+    "_id" : "wm-goToPage_select-wm.NavigationVariable-1499074683449",
+    "name" : "goToPage_select",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "select",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_tabs" : {
+    "_id" : "wm-goToPage_tabs-wm.NavigationVariable-1499076469635",
+    "name" : "goToPage_tabs",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "tabs",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_template_page" : {
+    "_id" : "wm-goToPage_template_page-wm.NavigationVariable-1498716051399",
+    "name" : "goToPage_template_page",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "template_page",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_test" : {
+    "_id" : "wm-goToPage_test-wm.NavigationVariable-1498714391355",
+    "name" : "goToPage_test",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_test1" : {
+    "_id" : "wm-goToPage_test1-wm.NavigationVariable-1498714463324",
+    "name" : "goToPage_test1",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test1",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_test11" : {
+    "_id" : "wm-goToPage_test11-wm.NavigationVariable-1498812285549",
+    "name" : "goToPage_test11",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test11",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_test111" : {
+    "_id" : "wm-goToPage_test111-wm.NavigationVariable-1499685705659",
+    "name" : "goToPage_test111",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test111",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_test12111" : {
+    "_id" : "wm-goToPage_test12111-wm.NavigationVariable-1499765407226",
+    "name" : "goToPage_test12111",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test12111",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_test12122q1" : {
+    "_id" : "wm-goToPage_test12122q1-wm.NavigationVariable-1499926685996",
+    "name" : "goToPage_test12122q1",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test12122q1",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_test123" : {
+    "_id" : "wm-goToPage_test123-wm.NavigationVariable-1499060042474",
+    "name" : "goToPage_test123",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test123",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_test67" : {
+    "_id" : "wm-goToPage_test67-wm.NavigationVariable-1499145072585",
+    "name" : "goToPage_test67",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test67",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_User" : {
+    "_id" : "wm-goToPage_User-wm.NavigationVariable-1499079680159",
+    "name" : "goToPage_User",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "User",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_vfszsc" : {
+    "_id" : "wm-goToPage_vfszsc-wm.NavigationVariable-1499150831055",
+    "name" : "goToPage_vfszsc",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "vfszsc",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "loggedInUser" : {
+    "_id" : "wm-loggedInUser-wm.Variable-1498711844351",
+    "name" : "loggedInUser",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "name" : "",
+      "id" : "",
+      "tenantId" : "",
+      "isAuthenticated" : false,
+      "isSecurityEnabled" : true,
+      "roles" : [ ]
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "loginVariable" : {
+    "_id" : "wm-loginVariable-wm.LoginVariable-1498711844350",
+    "name" : "loginVariable",
+    "owner" : "App",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ {
+      "target" : "username",
+      "value" : "bind:Widgets.usernametext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "password",
+      "value" : "bind:Widgets.passwordtext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "rememberme",
+      "value" : "bind:Widgets.remembermecheck.datavalue",
+      "type" : "boolean"
+    } ],
+    "dataSet" : {
+      "username" : "",
+      "password" : "",
+      "rememberme" : false
+    },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "onError" : "loginVariableonError($event, $s)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : true
+  },
+  "logoutVariable" : {
+    "_id" : "wm-logoutVariable-wm.LogoutVariable-1498711844350",
+    "name" : "logoutVariable",
+    "owner" : "App",
+    "category" : "wm.LogoutVariable",
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "redirectTo" : "Login",
+    "useDefaultSuccessHandler" : true
+  },
+  "networkInfo" : {
+    "_id" : "wm-networkInfo-wm.DeviceVariable-1499086757937",
+    "name" : "networkInfo",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ {
+      "target" : "networkStatus",
+      "value" : "bind:$root.networkStatus",
+      "type" : "boolean"
+    } ],
+    "service" : "device",
+    "operation" : "getNetworkInfo",
+    "dataSet" : {
+      "connectionType" : "NONE",
+      "isOnline" : true,
+      "isOffline" : false
+    },
+    "onOnline" : "Variables.datasyncPush.invoke()",
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "networkStatus" : "bind:$root.networkStatus"
+  },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
     "name" : "supportedLocale",
     "owner" : "App",
     "category" : "wm.Variable",
+    "dataBinding" : [ ],
     "dataSet" : {
-      "en" : "English"
+      "en" : "English",
+      "te-in" : "తెలుగు (భారత దేశం)",
+      "hi-in" : "हिंदी (भारत)"
     },
     "type" : "string",
     "isList" : false,

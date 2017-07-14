@@ -1,0 +1,57 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.wavemakeronline.basepath}",
+  "paths" : {
+    "/web_services/services/DB123Testing/queryExecutor/queries/selectData_test_blob/1/content/icon" : {
+      "x-WM-BASE_PATH" : "/web_services/services/DB123Testing/queryExecutor/queries/selectData_test_blob/1/content/icon",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "image/jpeg", "application/octet-stream" ],
+        "parameters" : [ {
+          "description" : "downloadAsAttachment",
+          "name" : "downloadAsAttachment",
+          "x-WM-EDITABLE" : false,
+          "format" : "string",
+          "type" : "string",
+          "required" : false,
+          "in" : "query"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "wavemakeronline_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.wavemakeronline.scheme}://${rest.wavemakeronline.host}${rest.wavemakeronline.basepath}/web_services/services/DB123Testing/queryExecutor/queries/selectData_test_blob/1/content/icon"
+    }
+  },
+  "host" : "${rest.wavemakeronline.host}",
+  "schemes" : [ "${rest.wavemakeronline.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "wavemakeronline.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "31c370a3-ea77-4a40-9f4c-95bbacac807e",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "version" : "2.0"
+  }
+}

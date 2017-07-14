@@ -1,0 +1,34 @@
+<wm-page name="page1" data-ng-controller="test11PageController">
+    <wm-left-panel name="left_panel1" content="leftnav" xscolumnwidth="12"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-form title="Form" name="form1" captionposition="top" dataset="bind:Variables.DB123TestingExecuteInsert_query.dataSet" errormessage="" captionalign="left" enctype="application/x-www-form-urlencoded" method="post">
+                <wm-layoutgrid name="layoutgrid1" columns="1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn name="gridcolumn1" columnwidth="12">
+                            <wm-form-field type="file" readonly="false" name="Icon" widget="upload" displayname="Icon" show="true" key="Icon"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn name="gridcolumn2" columnwidth="12">
+                            <wm-form-field type="string" readonly="false" name="City" widget="text" displayname="City" show="true" key="City"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn name="gridcolumn3" columnwidth="12">
+                            <wm-form-field type="string" readonly="false" name="Name" widget="text" displayname="Name" show="true" key="Name"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-buttongroup class="form-action col-md-12" name="buttongroup1" horizontalalign="right">
+                    <wm-button class="btn-secondary" type="reset" name="button1" caption="Reset"></wm-button>
+                    <wm-button class="btn-warning" type="button" name="button2" caption="Cancel"></wm-button>
+                    <wm-button class="btn-primary" type="submit" name="button3" caption="Save"></wm-button>
+                </wm-buttongroup>
+            </wm-form>
+            <wm-button class="btn-default" type="button" name="button4" caption="Button" on-tap="Variables.serviceVariable1.invoke()" margin="unset 0.5em"></wm-button>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>
