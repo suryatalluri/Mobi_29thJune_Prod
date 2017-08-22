@@ -1,0 +1,100 @@
+{
+  "InstagramController_callback" : {
+    "id" : "InstagramController_callback",
+    "service" : "instagram",
+    "controller" : "InstagramController",
+    "operationType" : "object",
+    "type" : "object",
+    "wmServiceOperationInfo" : {
+      "name" : "callback",
+      "methodType" : "get",
+      "relativePath" : "/instagram/callback",
+      "directPath" : "/instagram/callback",
+      "httpMethod" : "get",
+      "parameters" : [ ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "authorization" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true
+      }
+    }
+  },
+  "InstagramController_getCallbackURL" : {
+    "id" : "InstagramController_getCallbackURL",
+    "service" : "instagram",
+    "controller" : "InstagramController",
+    "operationType" : "string",
+    "type" : "string",
+    "wmServiceOperationInfo" : {
+      "name" : "getCallbackURL",
+      "methodType" : "get",
+      "relativePath" : "/instagram/callbackURL",
+      "directPath" : "/instagram/callbackURL",
+      "httpMethod" : "get",
+      "parameters" : [ ],
+      "definitions" : { },
+      "produces" : [ "application/json" ],
+      "consumes" : null,
+      "authorization" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true
+      }
+    }
+  },
+  "InstagramController_getAccessToken" : {
+    "id" : "InstagramController_getAccessToken",
+    "service" : "instagram",
+    "controller" : "InstagramController",
+    "operationType" : "string",
+    "type" : "string",
+    "wmServiceOperationInfo" : {
+      "name" : "getAccessToken",
+      "methodType" : "get",
+      "relativePath" : "/instagram/accessToken",
+      "directPath" : "/instagram/accessToken",
+      "httpMethod" : "get",
+      "parameters" : [ ],
+      "definitions" : { },
+      "produces" : [ "application/json" ],
+      "consumes" : null,
+      "authorization" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true
+      }
+    }
+  },
+  "InstagramController_getLoginURL" : {
+    "id" : "InstagramController_getLoginURL",
+    "service" : "instagram",
+    "controller" : "InstagramController",
+    "operationType" : "string",
+    "type" : "string",
+    "wmServiceOperationInfo" : {
+      "name" : "getLoginURL",
+      "methodType" : "get",
+      "relativePath" : "/instagram/loginURl",
+      "directPath" : "/instagram/loginURl",
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "state",
+        "parameterType" : "query",
+        "type" : "java.lang.String",
+        "required" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : [ "application/json" ],
+      "consumes" : null,
+      "authorization" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true
+      }
+    }
+  }
+}

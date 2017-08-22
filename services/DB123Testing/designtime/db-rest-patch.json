@@ -1,1 +1,5 @@
-{ }
+{
+  "AllTypesController" : {
+    "findAllTypes" : "UNAVAILABLE"
+  }
+}

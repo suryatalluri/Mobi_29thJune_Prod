@@ -1,0 +1,11 @@
+<wm-page data-ng-controller="fileDownloadPageController" name="page1">
+    <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-fileupload name="fileupload1" contenttype="image" service="FileService" operation="uploadFile" destination="wm"></wm-fileupload>
+            <wm-button class="btn-default" caption="Button" type="button" margin="unset 0.5em" name="button1" on-tap="Variables.serviceVariable1.invoke()"></wm-button>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,star,music" name="mobile_tabbar1"></wm-mobile-tabbar>
+</wm-page>

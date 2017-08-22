@@ -1,0 +1,9 @@
+{
+  "httpBasicAuthUsername" : "",
+  "httpBasicAuthPassword" : "",
+  "endpointAddress" : "http://ws1.parasoft.com/glue/calculator",
+  "connectionTimeout" : 10000,
+  "requestTimeout" : 10000,
+  "soapActionURI" : null,
+  "httpHeaders" : { }
+}

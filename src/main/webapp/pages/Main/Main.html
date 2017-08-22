@@ -1,11 +1,11 @@
-<wm-page data-ng-controller="MainPageController" name="mainpage">
-    <wm-left-panel name="left_panel1" content="leftnav" columnwidth="2" xscolumnwidth="10"></wm-left-panel>
-    <wm-mobile-navbar title="Title" name="mobile_navbar1" leftnavpaneliconclass="wi wi-menu" backbutton="false">
-        <wm-button class="navbar-btn btn-primary btn-default" type="button" caption="Action" name="button1" margin="unset 0.5em" iconclass=""></wm-button>
+<wm-page name="mainpage" data-ng-controller="MainPageController">
+    <wm-left-panel name="left_panel1" content="leftnav" xscolumnwidth="10" columnwidth="2"></wm-left-panel>
+    <wm-mobile-navbar title="Title" name="mobile_navbar1" backbutton="false" leftnavpaneliconclass="wi wi-menu">
+        <wm-button class="navbar-btn btn-primary btn-default" type="button" name="button1" caption="Action" iconclass="" on-tap="button1Tap($event, $scope)" margin="unset 0.5em"></wm-button>
     </wm-mobile-navbar>
     <wm-content name="content1">
         <wm-page-content name="page_content1" columnwidth="12">
-            <wm-livelist class="list-card" name="livelist1" navigation="Basic" listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-3 lg-4" dataset="bind:Variables.DB123TestingAllTypesData.dataSet">
+            <wm-livelist class="list-card" name="livelist1" dataset="bind:Variables.DB123TestingAllTypesData.dataSet" itemsperrow="xs-1 sm-2 md-3 lg-4" template="true" listclass="list-group" navigation="Basic" groupby="clobCol" horizontalalign="left">
                 <wm-listtemplate name="listtemplate1" layout="media">
                     <wm-card name="card1">
                         <wm-card-content name="card_content1" fontsize="0.8" fontunit="em">
@@ -15,13 +15,13 @@
                                         <wm-picture width="100%" name="Picture" picturesource="bind:Variables.DB123TestingAllTypesData.dataSet.blobCol"></wm-picture>
                                     </wm-gridcolumn>
                                     <wm-gridcolumn class="col-xs-6" name="gridcolumn2" columnwidth="6" colwidth="6" padding="unset 1.25em">
-                                        <wm-label class="text-muted p" caption="bind:Variables.DB123TestingAllTypesData.dataSet.intCol" name="ID" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
-                                        <wm-label class="h4" caption="bind:Variables.DB123TestingAllTypesData.dataSet.stringCol" name="Name" margin="0px unset" whitespace="nowrap"></wm-label>
-                                        <wm-label class="h5" caption="bind:Variables.DB123TestingAllTypesData.dataSet.textCol" name="JobTitle" margin="0px unset unset unset" whitespace="nowrap"></wm-label>
-                                        <wm-label class="p text-muted" caption="bind:Variables.DB123TestingAllTypesData.dataSet.byteCol" name="Department" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
-                                        <wm-label class="text-muted p" caption="bind:Variables.DB123TestingAllTypesData.dataSet.timestampCol" name="Location" whitespace="nowrap"></wm-label>
-                                        <wm-anchor class="h5" caption="bind:Variables.DB123TestingAllTypesData.dataSet.longCol" name="PhoneNumber" margin="0px unset" whitespace="nowrap" hyperlink="tel:"></wm-anchor>
-                                        <wm-anchor class="p text-muted" caption="bind:Variables.DB123TestingAllTypesData.dataSet.doubleCol" name="EmailID" whitespace="nowrap" hyperlink="mailto://"></wm-anchor>
+                                        <wm-label class="text-muted p" name="ID" caption="bind:Variables.DB123TestingAllTypesData.dataSet.intCol" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label class="h4" name="Name" caption="bind:Variables.DB123TestingAllTypesData.dataSet.stringCol" margin="0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label class="h5" name="JobTitle" caption="bind:Variables.DB123TestingAllTypesData.dataSet.textCol" margin="0px unset unset unset" whitespace="nowrap"></wm-label>
+                                        <wm-label class="p text-muted" name="Department" caption="bind:Variables.DB123TestingAllTypesData.dataSet.byteCol" margin="unset unset 0px unset" whitespace="nowrap"></wm-label>
+                                        <wm-label class="text-muted p" name="Location" caption="bind:Variables.DB123TestingAllTypesData.dataSet.timestampCol" whitespace="nowrap"></wm-label>
+                                        <wm-anchor class="h5" name="PhoneNumber" caption="bind:Variables.DB123TestingAllTypesData.dataSet.longCol" margin="0px unset" whitespace="nowrap" hyperlink="tel:"></wm-anchor>
+                                        <wm-anchor class="p text-muted" name="EmailID" caption="bind:Variables.DB123TestingAllTypesData.dataSet.doubleCol" whitespace="nowrap" hyperlink="mailto://"></wm-anchor>
                                     </wm-gridcolumn>
                                 </wm-gridrow>
                             </wm-layoutgrid>
@@ -29,21 +29,179 @@
                     </wm-card>
                 </wm-listtemplate>
             </wm-livelist>
-            <wm-fileupload name="fileupload1" operation="uploadFile" service="FileService" contenttype="image"></wm-fileupload>
-            <wm-button class="btn-default" type="button" caption="Button" name="button2" margin="unset 0.5em" badgevalue="1"></wm-button>
+            <wm-composite name="composite1">
+                <wm-label class="col-xs-4 control-label" name="label7"></wm-label>
+                <wm-container class="col-xs-8" name="container3">
+                    <wm-select name="select1"></wm-select>
+                </wm-container>
+            </wm-composite>
+            <wm-fileupload name="fileupload1" contenttype="image" service="FileService" operation="uploadFile"></wm-fileupload>
+            <wm-button class="btn-default" type="button" name="button2" caption="Button" margin="unset 0.5em" badgevalue="1"></wm-button>
             <wm-camera name="camera2" correctorientation="true"></wm-camera>
-            <wm-message caption="tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt ttttttttttttttt tttttt ttttttt" name="message1"></wm-message>
-            <wm-livelist class="media-list" name="livelist2" navigation="Pager" listclass="list-group" template="true" itemsperrow="xs-1 sm-1 md-1 lg-1" dataset="bind:Variables.HrdbEmployeeData.dataSet" datafield="All Fields" itemclass="list-group-item">
+            <wm-message name="message1" caption="tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt ttttttttttttttt tttttt ttttttt"></wm-message>
+            <wm-livelist listclass="list-group" template="true" itemsperrow="xs-1 sm-2 md-4 lg-6" class="list-card" dataset="bind:Variables.DB123TestingAllTypesData.dataSet" navigation="Basic" name="livelist4">
+                <wm-listtemplate layout="media" name="listtemplate4">
+                    <wm-card name="Picture">
+                        <wm-card-content name="card_content3">
+                            <wm-label caption="Name" name="Name" margin="0px unset unset unset" class="h4" whitespace="nowrap"></wm-label>
+                            <wm-layoutgrid columns="2" name="layoutgrid4">
+                                <wm-gridrow name="gridrow21">
+                                    <wm-gridcolumn colwidth="6" columnwidth="2" horizontalalign="left" name="gridcolumn23">
+                                        <wm-icon iconclass="wi wi-contact-mail fa-2x" class="text-muted" name="icon1"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn24">
+                                        <wm-label name="ID" caption="ID" fontunit="em" class="text-muted p" whitespace="nowrap"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow22">
+                                    <wm-gridcolumn colwidth="6" columnwidth="2" horizontalalign="left" name="gridcolumn25">
+                                        <wm-icon iconclass="wi wi-user fa-2x" class="text-muted" name="icon2"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn26">
+                                        <wm-label name="JobTitle" caption="JobTitle" fontunit="em" class="text-muted p"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow23">
+                                    <wm-gridcolumn colwidth="6" columnwidth="2" horizontalalign="left" name="gridcolumn27">
+                                        <wm-icon iconclass="wi wi-dashboard fa-2x" class="text-muted" name="icon3"></wm-icon>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn colwidth="6" padding="unset unset unset 1.25em" name="gridcolumn28">
+                                        <wm-label name="Department" caption="Department" fontunit="em" class="text-muted"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-card-content>
+                        <wm-card-footer horizontalalign="center" name="card_footer1">
+                            <wm-buttongroup class="btn-group-justified" horizontalalign="center" name="buttongroup1">
+                                <wm-anchor class="btn btn-transparent text-muted" caption="" iconclass="wi wi-mail fa-2x" name="anchor5"></wm-anchor>
+                                <wm-anchor class="btn btn-transparent" caption="" iconclass="wi wi-call fa-2x" name="anchor6"></wm-anchor>
+                                <wm-anchor class="btn btn-transparent" caption="" iconclass="wi wi-location-on fa-2x" name="anchor7"></wm-anchor>
+                            </wm-buttongroup>
+                        </wm-card-footer>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-livelist>
+            <wm-livelist class="media-list" name="livelist2" dataset="bind:Variables.HrdbEmployeeData.dataSet" itemsperrow="xs-1 sm-1 md-1 lg-1" template="true" listclass="list-group" navigation="Pager" itemclass="list-group-item" datafield="All Fields">
                 <wm-listtemplate name="listtemplate2" layout="inline">
                     <wm-container class="media-left" name="container1">
                         <wm-picture class="media-object" width="32pt" name="Picture" height="32pt" picturesource="bind:Variables.HrdbEmployeeData.dataSet.picurl" shape="circle"></wm-picture>
                     </wm-container>
                     <wm-container class="media-body" name="container2">
-                        <wm-label class="p media-heading" caption="bind:Variables.HrdbEmployeeData.dataSet.firstname" name="Name" fontunit="em" padding="unset unset unset 1.25em"></wm-label>
+                        <wm-label class="p media-heading" name="Name" caption="bind:Variables.HrdbEmployeeData.dataSet.firstname" fontunit="em" padding="unset unset unset 1.25em"></wm-label>
                     </wm-container>
                 </wm-listtemplate>
             </wm-livelist>
+            <wm-liveform errormessage="" title="Alltypes Info" iconclass="wi wi-edit" formlayout="inline" defaultmode="Edit" dataset="bind:Variables.DB123TestingAllTypesData.dataSet" captionalign="left" captionposition="top" name="liveform1">
+                <wm-layoutgrid columns="1" name="layoutgrid2">
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                            <wm-form-field name="id" displayname="Id" required="true" show="true" generator="assigned" primary-key="true" key="id" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn4">
+                            <wm-form-field name="byteCol" displayname="Byte Col" required="true" show="true" generator="assigned" primary-key="false" key="byteCol" type="byte" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow4">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                            <wm-form-field name="shortCol" displayname="Short Col" required="true" show="true" generator="assigned" primary-key="false" key="shortCol" type="short" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow5">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn6">
+                            <wm-form-field name="intCol" displayname="Int Col" required="true" show="true" generator="assigned" primary-key="false" key="intCol" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow6">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                            <wm-form-field name="longCol" displayname="Long Col" required="true" show="true" generator="assigned" primary-key="false" key="longCol" type="long" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow7">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn8">
+                            <wm-form-field name="floatCol" displayname="Float Col" required="true" show="true" generator="assigned" primary-key="false" key="floatCol" type="double" is-related="false" step="0.0001" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow8">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                            <wm-form-field name="doubleCol" displayname="Double Col" required="true" show="true" generator="assigned" primary-key="false" key="doubleCol" type="big_decimal" is-related="false" step="1e-8" pc-display="true" mobile-display="true"
+                            widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow9">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                            <wm-form-field name="bigintCol" displayname="Bigint Col" required="true" show="true" generator="assigned" primary-key="false" key="bigintCol" type="big_integer" is-related="false" step="0" pc-display="true" mobile-display="true"
+                            widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow10">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn11">
+                            <wm-form-field name="bigdecCol" displayname="Bigdec Col" required="true" show="true" generator="assigned" primary-key="false" key="bigdecCol" type="big_decimal" is-related="false" step="1e-15" pc-display="true" mobile-display="true"
+                            widget="number"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow11">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn12">
+                            <wm-form-field name="stringCol" displayname="String Col" required="true" show="true" generator="assigned" primary-key="false" key="stringCol" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true"
+                            widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow12">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                            <wm-form-field name="textCol" displayname="Text Col" required="true" show="true" generator="assigned" primary-key="false" key="textCol" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow13">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn14">
+                            <wm-form-field name="clobCol" displayname="Clob Col" required="true" show="true" generator="assigned" primary-key="false" key="clobCol" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow14">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn15">
+                            <wm-form-field name="dateCol" displayname="Date Col" required="true" show="true" generator="assigned" primary-key="false" key="dateCol" type="date" is-related="false" pc-display="true" mobile-display="true" widget="date"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow15">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn16">
+                            <wm-form-field name="datetimeCol" displayname="Datetime Col" required="true" show="true" generator="assigned" primary-key="false" key="datetimeCol" type="datetime" is-related="false" pc-display="true" mobile-display="true" widget="datetime"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow16">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn17">
+                            <wm-form-field name="timeCol" displayname="Time Col" required="true" show="true" generator="assigned" primary-key="false" key="timeCol" type="time" is-related="false" pc-display="true" mobile-display="true" widget="time"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow17">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn18">
+                            <wm-form-field name="timestampCol" displayname="Timestamp Col" required="true" show="true" generator="assigned" primary-key="false" key="timestampCol" type="datetime" is-related="false" pc-display="true" mobile-display="true" widget="datetime"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow18">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn19">
+                            <wm-form-field name="booleanCol" displayname="Boolean Col" required="true" show="true" generator="assigned" primary-key="false" key="booleanCol" type="boolean" is-related="false" pc-display="true" mobile-display="true" widget="checkbox"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow19">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn20">
+                            <wm-form-field name="blobCol" displayname="Blob Col" required="true" show="true" generator="assigned" primary-key="false" key="blobCol" type="blob" is-related="false" maxchars="-1" pc-display="true" mobile-display="true" widget="upload"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-form-action key="reset" class="form-reset btn-secondary" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true"></wm-form-action>
+                <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+            </wm-liveform>
+            <wm-composite name="composite2">
+                <wm-label class="col-xs-4 control-label" name="label8"></wm-label>
+                <wm-container class="col-xs-8" name="container4">
+                    <wm-date name="date1"></wm-date>
+                </wm-container>
+            </wm-composite>
         </wm-page-content>
     </wm-content>
-    <wm-mobile-tabbar name="mobile_tabbar1" dataset="bind:Variables.staticVariable1.dataSet" itemlabel="label" itemicon="icon" itemlink="link"></wm-mobile-tabbar>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="bind:Variables.staticVariable1.dataSet" itemlink="link" itemicon="icon" itemlabel="label"></wm-mobile-tabbar>
+    <wm-view class="dialog-view" name="view1">
+        <wm-alertdialog title="{{notification.title}}" name="notificationalertdialog" controller="NotificationDialogController" message="{{notification.text}}" on-ok="variableOnOk()" oktext="{{notification.okButtonText}}" on-close="variableOnClose()" alerttype="{{notification.alerttype}}"
+        notificationdialog="alert"></wm-alertdialog>
+    </wm-view>
 </wm-page>

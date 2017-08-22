@@ -1,0 +1,21 @@
+{
+  "url" : "ldap://ec2-54-87-2-36.compute-1.amazonaws.com:389",
+  "managerDn" : null,
+  "managerPassword" : null,
+  "testDn" : null,
+  "testPassword" : null,
+  "userDnPattern" : "uid={0},ou=Users,dc=ec2,dc=internal",
+  "groupSearchDisabled" : false,
+  "groupSearchBase" : "ou=groups,dc=ec2,dc=internal",
+  "groupRoleAttribute" : "cn",
+  "groupSearchFilter" : "(member={0})",
+  "roleModel" : null,
+  "roleEntity" : null,
+  "roleTable" : null,
+  "roleUsername" : null,
+  "roleProperty" : null,
+  "useRolesQuery" : false,
+  "roleQuery" : "",
+  "roleProvider" : "LDAP",
+  "queryType" : "HQL"
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="MyJavaService3" class="com.mobi_29thjune_prod.myjavaservice.MyJavaService3" type="JavaService" springFile="MyJavaService3.spring.xml">
+    <dataobjects/>
+</service>

@@ -1,0 +1,31 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-s60kf6jghc/Mobi_29thJune_Prod/services/hrdb/User",
+  "method" : "POST",
+  "headers" : {
+    "Authorization" : [ "Basic dXNlcjp1c2Vy" ],
+    "Content-Type" : [ "application/json" ]
+  },
+  "redirectEnabled" : true,
+  "requestBody" : "{\n\t\"userId\": 8,\n\t\"username\": \"test\",\n\t\"password\": \"test\",\n\t\"role\": \"test\",\n\t\"tenantId\": 1\n}",
+  "queryParams" : { },
+  "authType" : "BASIC",
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 0,
+    "headers" : {
+      "date" : [ "Thu, 17 Aug 2017 10:59:52 GMT" ],
+      "content-encoding" : [ "gzip" ],
+      "x-content-type-options" : [ "nosniff" ],
+      "x-frame-options" : [ "SAMEORIGIN" ],
+      "content-type" : [ "application/json;charset=UTF-8" ],
+      "transfer-encoding" : [ "chunked" ],
+      "connection" : [ "keep-alive" ],
+      "vary" : [ "Accept-Encoding" ],
+      "x-xss-protection" : [ "1; mode=block" ]
+    },
+    "responseBody" : "{\"userId\":9,\"username\":\"test\",\"password\":\"test\",\"role\":\"test\",\"tenantId\":1}",
+    "convertedResponse" : null
+  },
+  "proxy" : null
+}

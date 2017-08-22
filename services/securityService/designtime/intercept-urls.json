@@ -4,6 +4,11 @@
   "roles" : [ ],
   "httpMethod" : null
 }, {
+  "urlPattern" : "/pages/form/**",
+  "permission" : "Role",
+  "roles" : [ "admin", "user" ],
+  "httpMethod" : null
+}, {
   "urlPattern" : "/pages/Googlemaps/**",
   "permission" : "PermitAll",
   "roles" : [ ],
@@ -140,11 +145,6 @@
   "httpMethod" : null
 }, {
   "urlPattern" : "/services/file/**",
-  "permission" : "PermitAll",
-  "roles" : [ ],
-  "httpMethod" : null
-}, {
-  "urlPattern" : "/services/hrdb/**",
   "permission" : "PermitAll",
   "roles" : [ ],
   "httpMethod" : null

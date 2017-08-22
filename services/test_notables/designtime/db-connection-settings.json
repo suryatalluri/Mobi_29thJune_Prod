@@ -11,7 +11,13 @@
   "dbName" : "test_notables",
   "port" : "",
   "schemaName" : null,
-  "tableFilter" : [ ],
+  "tableFilter" : [ {
+    "table" : "TABLE1",
+    "schema" : null
+  }, {
+    "table" : "TABLE2",
+    "schema" : null
+  } ],
   "schemaFilter" : [ ],
   "impersonateUser" : false,
   "activeDirectoryDomain" : null,
@@ -21,6 +27,10 @@
   "maxPoolSize" : 4,
   "dataSourceType" : "WM_MANAGED_DATASOURCE",
   "jndiName" : "",
-  "reloadInfo" : null,
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
   "readOnly" : false
 }

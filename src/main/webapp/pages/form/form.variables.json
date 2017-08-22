@@ -1,0 +1,25 @@
+{
+  "Test_notablesCreateTable1" : {
+    "_id" : "wm-Test_notablesCreateTable1-wm.ServiceVariable-1501146161277",
+    "name" : "Test_notablesCreateTable1",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mobi_29thjune_prod.test_notables.Table1",
+    "service" : "test_notables",
+    "operation" : "createTable1",
+    "operationId" : "Table1Controller_createTable1_1",
+    "operationType" : "post",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "Table1"
+  }
+}

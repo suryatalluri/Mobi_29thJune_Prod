@@ -1,0 +1,88 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.wavemakeronline4.basepath}",
+  "paths" : {
+    "/Mobi_29thJune_Prod/services/jhgjj/Table3" : {
+      "x-WM-BASE_PATH" : "/Mobi_29thJune_Prod/services/jhgjj/Table3",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "security" : [ {
+          "WM_Rest_Service_Authorization" : [ ]
+        } ],
+        "parameters" : [ {
+          "x-WM-FULLY_QUALIFIED_TYPE" : "org.springframework.web.multipart.MultipartFile",
+          "items" : {
+            "type" : "file"
+          },
+          "name" : "column3",
+          "x-WM-EDITABLE" : true,
+          "type" : "array",
+          "required" : false,
+          "in" : "formData"
+        }, {
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "name" : "wm_data_json",
+          "x-WM-EDITABLE" : true,
+          "type" : "string",
+          "required" : false,
+          "in" : "formData",
+          "x-WM-CONTENT_TYPE" : "application/json"
+        } ],
+        "consumes" : [ "multipart/form-data" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "wavemakeronline4_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.wavemakeronline4.scheme}://${rest.wavemakeronline4.host}${rest.wavemakeronline4.basepath}/Mobi_29thJune_Prod/services/jhgjj/Table3"
+    }
+  },
+  "host" : "${rest.wavemakeronline4.host}",
+  "schemes" : [ "${rest.wavemakeronline4.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "wavemakeronline4.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "column3" : {
+          "type" : "string"
+        },
+        "column2" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "column2", "column3", "id" ]
+    }
+  },
+  "securityDefinitions" : {
+    "WM_Rest_Service_Authorization" : {
+      "type" : "basic"
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "27dd24ee-4436-4652-8fc7-2d7d957242ff",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline4",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "version" : "2.0"
+  }
+}

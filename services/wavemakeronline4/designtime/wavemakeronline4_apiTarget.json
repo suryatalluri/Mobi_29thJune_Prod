@@ -1,0 +1,88 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "27dd24ee-4436-4652-8fc7-2d7d957242ff",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline4",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false
+  },
+  "host" : "www.wavemakeronline.com",
+  "basePath" : "/run-s60kf6jghc",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/Mobi_29thJune_Prod/services/jhgjj/Table3" : {
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "wavemakeronline4_RestServiceVirtualController-invoke",
+        "consumes" : [ "multipart/form-data" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "column3",
+          "in" : "formData",
+          "required" : false,
+          "type" : "array",
+          "items" : {
+            "type" : "file"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "org.springframework.web.multipart.MultipartFile",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "wm_data_json",
+          "in" : "formData",
+          "required" : false,
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-EDITABLE" : true,
+          "x-WM-CONTENT_TYPE" : "application/json"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "security" : [ {
+          "WM_Rest_Service_Authorization" : [ ]
+        } ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "/Mobi_29thJune_Prod/services/jhgjj/Table3",
+      "x-WM-COMPLETE_PATH" : "${rest.wavemakeronline4.scheme}://${rest.wavemakeronline4.host}${rest.wavemakeronline4.basepath}/Mobi_29thJune_Prod/services/jhgjj/Table3",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "securityDefinitions" : {
+    "WM_Rest_Service_Authorization" : {
+      "type" : "basic"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "column2", "column3", "id" ],
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "column3" : {
+          "type" : "string"
+        },
+        "column2" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "wavemakeronline4.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

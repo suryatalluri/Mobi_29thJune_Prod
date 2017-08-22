@@ -1,0 +1,121 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.wavemakeronline3.basepath}",
+  "paths" : {
+    "/Mobi_29thJune_Prod/services/hrdb/User" : {
+      "x-WM-BASE_PATH" : "/Mobi_29thJune_Prod/services/hrdb/User",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "security" : [ {
+          "WM_Rest_Service_Authorization" : [ ]
+        } ],
+        "parameters" : [ {
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "items" : {
+            "type" : "string"
+          },
+          "description" : "Content-Type",
+          "name" : "Content-Type",
+          "x-WM-EDITABLE" : true,
+          "type" : "string",
+          "required" : false,
+          "in" : "header"
+        }, {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "description" : "RequestBody",
+          "name" : "RequestBody",
+          "required" : false,
+          "in" : "body"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "wavemakeronline3_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.wavemakeronline3.scheme}://${rest.wavemakeronline3.host}${rest.wavemakeronline3.basepath}/Mobi_29thJune_Prod/services/hrdb/User"
+    }
+  },
+  "host" : "${rest.wavemakeronline3.host}",
+  "schemes" : [ "${rest.wavemakeronline3.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "wavemakeronline3.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "username" : {
+          "type" : "string"
+        },
+        "userId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "role" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "password", "role", "tenantId", "userId", "username" ]
+    },
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "wavemakeronline3.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "username" : {
+          "type" : "string"
+        },
+        "userId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "role" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "password", "role", "tenantId", "userId", "username" ]
+    }
+  },
+  "securityDefinitions" : {
+    "WM_Rest_Service_Authorization" : {
+      "type" : "basic"
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "3decd2b8-f3b9-4cd2-96d9-57ee28c46a33",
+    "x-WM-USE_PROXY_FOR_WEB" : false,
+    "x-WM-SERVICE_ID" : "wavemakeronline3",
+    "x-WM-USE_PROXY_FOR_MOBILE" : false,
+    "version" : "2.0"
+  }
+}

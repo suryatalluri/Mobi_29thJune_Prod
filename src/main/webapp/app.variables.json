@@ -92,9 +92,10 @@
     "service" : "FileService",
     "operation" : "uploadFile",
     "operationId" : "FileController_uploadFile",
+    "operationType" : "post",
     "serviceType" : "JavaService",
     "dataSet" : [ ],
-    "isList" : false,
+    "isList" : true,
     "maxResults" : 20,
     "startUpdate" : false,
     "autoUpdate" : true,
@@ -112,6 +113,39 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "file",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_fileDownload" : {
+    "_id" : "wm-goToPage_fileDownload-wm.NavigationVariable-1503384167907",
+    "name" : "goToPage_fileDownload",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "fileDownload",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_form" : {
+    "_id" : "wm-goToPage_form-wm.NavigationVariable-1501145812611",
+    "name" : "goToPage_form",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "form",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_form11" : {
+    "_id" : "wm-goToPage_form11-wm.NavigationVariable-1502967605594",
+    "name" : "goToPage_form11",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "form11",
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
@@ -134,6 +168,17 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "jtj",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_List" : {
+    "_id" : "wm-goToPage_List-wm.NavigationVariable-1503293263845",
+    "name" : "goToPage_List",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "List",
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
@@ -197,6 +242,17 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "page",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Pageo997798" : {
+    "_id" : "wm-goToPage_Pageo997798-wm.NavigationVariable-1501664317246",
+    "name" : "goToPage_Pageo997798",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Pageo997798",
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
@@ -310,6 +366,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_test61818" : {
+    "_id" : "wm-goToPage_test61818-wm.NavigationVariable-1500900027845",
+    "name" : "goToPage_test61818",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test61818",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_test67" : {
     "_id" : "wm-goToPage_test67-wm.NavigationVariable-1499145072585",
     "name" : "goToPage_test67",
@@ -340,6 +407,17 @@
     "dataBinding" : [ ],
     "operation" : "gotoPage",
     "pageName" : "vfszsc",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_vsez" : {
+    "_id" : "wm-goToPage_vsez-wm.NavigationVariable-1501049868328",
+    "name" : "goToPage_vsez",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "vsez",
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
@@ -426,6 +504,19 @@
     "startUpdate" : true,
     "autoUpdate" : true,
     "networkStatus" : "bind:$root.networkStatus"
+  },
+  "staticVariable1" : {
+    "_id" : "wm-staticVariable1-wm.Variable-1501224025070",
+    "name" : "staticVariable1",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : true
+    },
+    "type" : "boolean",
+    "isList" : false,
+    "saveInPhonegap" : false
   },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",

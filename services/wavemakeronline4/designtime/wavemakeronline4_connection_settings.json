@@ -1,0 +1,42 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-s60kf6jghc/Mobi_29thJune_Prod/services/jhgjj/Table3",
+  "method" : "POST",
+  "headers" : {
+    "Authorization" : [ "Basic dXNlcjp1c2Vy" ]
+  },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : { },
+  "authType" : "BASIC",
+  "contentType" : "multipart/form-data",
+  "multiParamInfoList" : [ {
+    "type" : "FILE",
+    "name" : "column3",
+    "list" : true,
+    "testValue" : null,
+    "contentType" : null
+  }, {
+    "type" : "STRING",
+    "name" : "wm_data_json",
+    "list" : false,
+    "testValue" : "{\"column2\":\"test1\",\"id\":2}",
+    "contentType" : "application/json"
+  } ],
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 0,
+    "headers" : {
+      "date" : [ "Thu, 17 Aug 2017 11:09:49 GMT" ],
+      "content-encoding" : [ "gzip" ],
+      "x-content-type-options" : [ "nosniff" ],
+      "x-frame-options" : [ "SAMEORIGIN" ],
+      "content-type" : [ "application/json;charset=UTF-8" ],
+      "transfer-encoding" : [ "chunked" ],
+      "connection" : [ "keep-alive" ],
+      "vary" : [ "Accept-Encoding" ],
+      "x-xss-protection" : [ "1; mode=block" ]
+    },
+    "responseBody" : "{\"id\":2,\"column2\":\"test1\",\"column3\":\"\"}",
+    "convertedResponse" : null
+  },
+  "proxy" : null
+}
